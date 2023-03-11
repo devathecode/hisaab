@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,12 +14,12 @@ const Header = () => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
-                            <h1 className="text-3xl sm:text-4xl tracking-widest text-white font-bold uppercase font-mono">Hisaab</h1>
+                            <NavLink to="/" className="text-3xl sm:text-4xl tracking-widest text-white font-bold uppercase font-mono">Hisaab</NavLink>
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
-                                <a href="/" className="text-gray-100 hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                                <a href="/" className="text-gray-100 hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Table</a>
+                                <NavLink to="/" className="text-gray-100 hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</NavLink>
+                                <NavLink to="/table" className="text-gray-100 hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Table</NavLink>
                             </div>
                         </div>
                     </div>

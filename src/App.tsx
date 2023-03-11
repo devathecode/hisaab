@@ -3,13 +3,18 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import {Route, Routes} from "react-router-dom";
+import Table from "./components/Table/Table";
 
 const App = () => {
     return (
         <>
             <ToastContainer />
             <Header/>
-            <Home/>
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/table" element={<Table/>} />
+            </Routes>
         </>
     );
 };
