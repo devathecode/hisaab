@@ -73,7 +73,7 @@ const Home = () => {
 
     const getTotalSpends = () =>{
         if(data.length !== 0){
-            return data.map((element: any) => element.amount).reduce((a, b) => Number(a) + Number(b)).toString();
+            return data.map((element: any) => element.amount).reduce((a: any, b: any) => Number(a) + Number(b)).toString();
         }
         else{
             return ''
